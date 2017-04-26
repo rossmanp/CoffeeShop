@@ -8,24 +8,35 @@
     h3{
         text-align: center;
     }
+    fieldset {
+        border:5px solid brown;
+    }
     #RegForm{
         text-align:center;
+        font-weight:bold;    
     }
 
 </style>
 <!--<h2>@ViewBag.Title</h2>-->
 <h3>@ViewBag.Message</h3>
-
-       <br />
+     
         <form name="Reg" id="RegForm" action="Success" method="get" onsubmit="return validateForm()">
-            <p><em>First Name:</em></p>
-            <input id="First" type="text" name="FirstName" />
-            <p><em>Last Name:</em></p>
-            <input id="Last" type="text" name="LastName" />
-            <p><em>Email:</em></p>
-            <input id="Email" type="text" name="EmailAddress" />
-            <br /><br />
-            <input type="submit" name="submit" value="Submit">
+            <fieldset>
+                <legend>Register a new account below</legend>
+                <p><em>First Name:</em></p>
+                <input id="First" type="text" name="FirstName" />
+                <p><em>Last Name:</em></p>
+                <input id="Last" type="text" name="LastName" />
+                <p><em>Email:</em></p>
+                <input id="Email" type="text" name="EmailAddress" />
+                <p><em>Password:</em></p>
+                <input id="Password" type="text" name="Password" />
+                <p><em>Confirm Password:</em></p>
+                <input id="ConfirmPassword" type="text" />
+            </fieldset>
+                <br /><br />
+                <input type="submit" name="submit" value="Submit">
+            
         </form>
 
 
@@ -45,9 +56,16 @@
     }
     var fEmail = $("#Email").val();
     if (fEmail === "") {
-      alert("Please enter your email address");
+      alert("Please enter your email address.");
       return false;
     }
-  }
+    var firstPassword = $("#Password").val();
+    var secondPassword = $("#ConfirmPassword").val();
+    if (firstPassword != secondPassword)  {
+        alert("Passwords do not match.");
+        return false;
+    }
+}
+  
 </script>
 
