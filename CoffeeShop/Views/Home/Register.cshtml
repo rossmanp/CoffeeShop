@@ -21,14 +21,19 @@
     address inputs in the registration form.-->
 <script>
   function validateForm() { 
-    var fName = $("#First").val();   
-    if (fName === "") {
-      alert("Name must be filled out");
+    var fFirstName = $("#First").val();   
+    if (fFirstName === "") {
+      alert("Please enter your first name.");
       return false;
+    }
+    var fLastName = $("#Last").val();
+    if (fLastName === "") {
+        alert("Please enter your last name.");
+        return false;
     }
     var fEmail = $("#Email").val();
     if (fEmail === "") {
-      alert("Email Must be filled out");
+      alert("Please enter your email address");
       return false;
     }
   }
