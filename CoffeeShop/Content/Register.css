@@ -1,0 +1,13 @@
+﻿    h2{
+        text-align: center;
+    }
+    h3{
+        text-align: center;
+    }
+    fieldset {
+        border:5px solid brown;
+    }
+    #RegForm{
+        text-align:center;
+        font-weight:bold;    
+    }

@@ -1,22 +1,7 @@
 ﻿@{
     ViewBag.Title = "Register";
 }
-<style>
-    h2{
-        text-align: center;
-    }
-    h3{
-        text-align: center;
-    }
-    fieldset {
-        border:5px solid brown;
-    }
-    #RegForm{
-        text-align:center;
-        font-weight:bold;    
-    }
-
-</style>
+<link href="@Url.Content("~/Content/Register.css")" rel="stylesheet" type="text/css" />
 <!--<h2>@ViewBag.Title</h2>-->
 <h3>@ViewBag.Message</h3>
      
@@ -54,6 +39,7 @@
         alert("Please enter your last name.");
         return false;
     }
+    
     var fEmail = $("#Email").val();
     if (fEmail === "") {
       alert("Please enter your email address.");
