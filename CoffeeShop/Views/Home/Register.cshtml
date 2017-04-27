@@ -6,18 +6,18 @@
 <h3>@ViewBag.Message</h3>
      
         <form name="Reg" id="RegForm" action="Success" method="get" onsubmit="return validateForm()">
-            <fieldset id="bootstrap-overrides">
-                <legend>Register a new account below</legend>
-                <p><em>First Name:</em></p>
-                <input id="First" type="text" name="FirstName" />
-                <p><em>Last Name:</em></p>
-                <input id="Last" type="text" name="LastName" />
-                <p><em>Email(example: this@example.com):</em></p>
+            <fieldset>
+                <legend>Register your account.</legend>
+                <p>First Name:</p>
+                <input id="First" type="text" name="FirstName" required />
+                <p>Last Name:</p>
+                <input id="Last" type="text" name="LastName" required />
+                <p>Email(example: this@example.com):</p>
                 <input id="Email" type="text" pattern="^[a-zA-Z0-9._+-]+&#64;[a-zA-Z0-9.-]+\.[a-zA-Z]{2,9}$" name="EmailAddress" required />
-                <p><em>Password:</em></p>
-                <input id="Password" type="password" name="Password" />
-                <p><em>Confirm Password:</em></p>
-                <input id="ConfirmPassword" type="password" />
+                <p>Password:</p>
+                <input id="Password" type="password" name="Password" required />
+                <p>Confirm Password:</p>
+                <input id="ConfirmPassword" type="password" required />
                 <br />
             </fieldset>
                 <br />
