@@ -4,9 +4,11 @@
     h3{
         text-align: center;
     }
-    fieldset {
-        border:5px solid brown;
+    #bootstrap-overrides {
+        border: 2px;
+        margin: 40px 40px 40px 40px;       
     }
+    
     #RegForm{
         text-align:center;
         font-weight:bold;    
