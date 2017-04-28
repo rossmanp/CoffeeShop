@@ -16,7 +16,8 @@ namespace CoffeeShop.Controllers
         }
 
         public ActionResult Success(RegisterModel r)
-        {                     
+        {
+           
             ViewBag.Message = " Your first name is " + r.FirstName  + " " + r.LastName
                 + " and your email address is " + r.EmailAddress;
             return View();

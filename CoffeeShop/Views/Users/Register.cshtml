@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Register";
+}
+<link href="@Url.Content("~/Content/Register.css")" rel="stylesheet" type="text/css" />
+<!--<h2>@ViewBag.Title</h2>-->
+<h3>@ViewBag.Message</h3>
+
+
+@using (Html.BeginForm())
+
+{
+    @Html.AntiForgeryToken();
+<form name="Reg" id="RegForm" action="Register" method="post" onsubmit="return validateForm()">
+    <fieldset>
+        <legend>Register your account.</legend>
+        <p>First Name:</p>
+        <input id="First" type="text" name="FirstName" required />
+        <p>Last Name:</p>
+        <input id="Last" type="text" name="LastName" required />
+        <p>Email(example: this@example.com):</p>
+        <input id="Email" type="text" pattern="^[a-zA-Z0-9._+-]+&#64;[a-zA-Z0-9.-]+\.[a-zA-Z]{2,9}$" name="EmailAddress" required />
+        <p>Password:</p>
+        <input id="Password" type="password" name="Password" required />
+        <p>Confirm Password:</p>
+        <input id="ConfirmPassword" type="password" required />
+        <br />
+    </fieldset>
+    <br />
+    <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+
+</form>
+}
+
+
+<!--The following script  validates the FirstName and Email
+    address inputs in the registration form.-->
+<script>
+  function validateForm() {
+    var fFirstName = $("#First").val();
+    if (fFirstName === "") {
+      alert("Please enter your first name.");
+      return false;
+    }
+    var fLastName = $("#Last").val();
+    if (fLastName === "") {
+        alert("Please enter your last name.");
+        return false;
+    }
+
+    //var fEmail = $("#Email").val();
+    //if (fEmail === "") {
+    //  alert("Please enter your email address.");
+    //  return false;
+    //}
+    var firstPassword = $("#Password").val();
+    var secondPassword = $("#ConfirmPassword").val();
+    if (firstPassword != secondPassword)  {
+        alert("Passwords do not match.");
+        return false;
+    }
+}
+
+</script>
+

@@ -13,10 +13,10 @@ namespace CoffeeShop.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CoffeeShopDBEntities : DbContext
+    public partial class CoffeeShopDBEntities1 : DbContext
     {
-        public CoffeeShopDBEntities()
-            : base("name=CoffeeShopDBEntities")
+        public CoffeeShopDBEntities1()
+            : base("name=CoffeeShopDBEntities1")
         {
         }
     
@@ -25,8 +25,7 @@ namespace CoffeeShop.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<User> Users { get; set; }
-
-        public System.Data.Entity.DbSet<CoffeeShop.Models.Item> Items { get; set; }
     }
 }
