@@ -129,18 +129,6 @@ namespace CoffeeShop.Controllers
             return View();
         }
 
-        public ActionResult RegisterCreate(User user)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Users.Add(user);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(user);
-        }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Register([Bind(Include = "FirstName,LastName,EmailAddress,Password")] User user)
@@ -149,7 +137,11 @@ namespace CoffeeShop.Controllers
             {
                 db.Users.Add(user);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Success", "Home", new {
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    EmailAddress = user.EmailAddress
+                }); ;
             }
 
             return View(user);
