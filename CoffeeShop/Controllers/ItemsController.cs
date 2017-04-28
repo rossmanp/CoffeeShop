@@ -123,5 +123,10 @@ namespace CoffeeShop.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Shop()
+        {
+            return View();
+        }
     }
 }

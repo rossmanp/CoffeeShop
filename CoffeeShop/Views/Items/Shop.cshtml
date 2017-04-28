@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Shop";
+}
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="center">
+            <h1>Pete's Market</h1>
+            <p>We've got all that you want, so long as you want eggs, milk, bread, or cheese.</p>
+        </div>
+    </div>
+</div>
+
+<select class="form-control center" id="sel1"></select>
+
+<script src="script.js" type="text/javascript"></script>
+
+<div class="brow text-center">
+    <button type="button" class="btn btn-primary" id="cart" onClick="GetSelectedItem('sel1');">
+        <i class="fa fa-shopping-cart" aria-hidden="true">
+            Add Item to Cart
+    </button></i>
+    <button type="button" class="btn btn-info" id="viewCart" onClick="viewCart(cartArray);">
+        View Cart
+    </button>
+    <button type="button" class="btn btn-success" id="checkOut" onClick="checkout(cartArray);">
+        Checkout
+    </button>
+    <button type="button" class="btn btn-danger" id="resetCart" onClick="resetCart();">
+        Empty Cart
+    </button>
+</div>	 
