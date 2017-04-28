@@ -1,0 +1,23 @@
+﻿ #sel1{
+        width:50%;
+	    display:inline-block;
+        margin-left: 300px;       
+		position: relative;
+		text-align:center;
+    }
+	.brow{		
+		width:100%;
+	}
+	.center{
+	text-align: center
+	}
+	textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	}
+	.container .jumbotron {
+    border-radius: 200px;
+	background-color:#7ec0ee;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	}
