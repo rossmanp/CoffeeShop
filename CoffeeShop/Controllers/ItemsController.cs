@@ -12,7 +12,7 @@ namespace CoffeeShop.Controllers
 {
     public class ItemsController : Controller
     {
-        private CoffeeShopDBEntities db = new CoffeeShopDBEntities();
+        private CoffeeShopDBEntities1 db = new CoffeeShopDBEntities1();
 
         // GET: Items
         public ActionResult Index()
