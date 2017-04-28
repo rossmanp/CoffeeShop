@@ -1,6 +1,9 @@
 ﻿
 @{
-    ViewBag.Title = "Shop";
+    string[] items = { "Eggs", "Milk", "Bread", "Cheese" };
+    double[] prices = { 1.25, 2.50, 3.10, 4.00 };
+    double[] printPrices = { };
+    
 }
 
 <div class="container">
@@ -12,10 +15,12 @@
     </div>
 </div>
 
-<select class="form-control center" id="sel1"></select>
-
-<script src="script.js" type="text/javascript"></script>
-
+<select class="form-control center" id="sel1">
+    @foreach (var item in items)
+    {
+        <option>@item</option>
+    }
+</select>
 <div class="brow text-center">
     <button type="button" class="btn btn-primary" id="cart" onClick="GetSelectedItem('sel1');">
         <i class="fa fa-shopping-cart" aria-hidden="true">
