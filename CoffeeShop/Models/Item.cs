@@ -6,6 +6,9 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using System;
+using System.Data.Entity;
+using System.ComponentModel.DataAnnotations;
 
 namespace CoffeeShop.Models
 {
@@ -14,9 +17,17 @@ namespace CoffeeShop.Models
     
     public partial class Item
     {
+        [Required]
+        [StringLength(20)]
         public string Name { get; set; }
+        [Required]
+        [StringLength(2000)]
         public string Description { get; set; }
+        [Required]
+        [Range(1, 1000)]
         public int Quantity { get; set; }
+        [Required]
+        [Range(1,150)]
         public decimal Price { get; set; }
         public int ID { get; set; }
     }
