@@ -10,6 +10,7 @@ using CoffeeShop.Models;
 
 namespace CoffeeShop.Controllers
 {
+    [Authorize]
     public class ItemsController : Controller
     {
         private CoffeeShopDBEntities1 db = new CoffeeShopDBEntities1();
